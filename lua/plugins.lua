@@ -45,9 +45,20 @@ packer.startup({ function(use)
       'onsails/lspkind-nvim',
     }
   }
+  
+  -- Formatters
+  
+  -- Prettier
+  use {
+    'MunifTanjim/prettier.nvim',
+    requires = {
+      'neovim/nvim-lspconfig',
+      'jose-elias-alvarez/null-ls.nvim',
+    }
+  }
 
   -- Git
-  --use { 'lewis6991/gitsigns.nvim', tag = 'release' }
+  use { 'lewis6991/gitsigns.nvim', tag = 'release' }
 
   -- RGB CSS/HEX Colorizer
   use 'norcalli/nvim-colorizer.lua'
