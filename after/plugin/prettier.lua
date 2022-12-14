@@ -54,7 +54,7 @@ prettier.setup({
     "scss",
     "typescript",
     "typescriptreact",
-	"vue",
+    "vue",
     "yaml",
   },
 })

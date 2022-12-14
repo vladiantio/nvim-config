@@ -45,9 +45,9 @@ packer.startup({ function(use)
       'onsails/lspkind-nvim',
     }
   }
-  
+
   -- Formatters
-  
+
   -- Prettier
   use {
     'MunifTanjim/prettier.nvim',
@@ -64,7 +64,15 @@ packer.startup({ function(use)
   use 'norcalli/nvim-colorizer.lua'
 
   -- Colorscheme
-  use 'marko-cerovac/material.nvim'
+  use {
+    'ellisonleao/gruvbox.nvim',
+    config = function()
+      require('gruvbox').setup{
+        contrast = "hard",
+      }
+      vim.cmd 'colorscheme gruvbox'
+    end
+  }
 
   -- Indent Lines
   use 'lukas-reineke/indent-blankline.nvim'
