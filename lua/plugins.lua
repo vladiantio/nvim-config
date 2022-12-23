@@ -62,7 +62,7 @@ packer.startup({ function(use)
 
   -- Comment
   use 'numToStr/Comment.nvim'
-  
+
   -- Autopair
   use 'windwp/nvim-autopairs'
 
@@ -111,6 +111,12 @@ packer.startup({ function(use)
   use {
     'nvim-telescope/telescope-symbols.nvim',
     after = 'telescope.nvim'
+  }
+
+  -- Trouble list
+  use {
+    'folke/trouble.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' }
   }
 
   -- Automatically set up your configuration after cloning packer.nvim

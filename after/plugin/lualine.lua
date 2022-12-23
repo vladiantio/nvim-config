@@ -13,8 +13,7 @@ lualine.setup({
     --section_separators = { left = '', right = ''},
     section_separators = '',
     disabled_filetypes = {
-      statusline = {},
-      winbar = {},
+      'Trouble',
     },
     ignore_focus = {},
     always_divide_middle = true,
