@@ -84,3 +84,13 @@ cmp.setup.cmdline(':', {
 
 -- Keymaps
 lspconfig_keymaps()
+
+-- Only for nvim-autopairs:
+-- If you want insert `(` after select function or method item
+local present_cmp_autopairs, cmp_autopairs = pcall(require, 'nvim-autopairs.completion.cmp')
+if present_cmp_autopairs then
+  cmp.event:on(
+    'confirm_done',
+    cmp_autopairs.on_confirm_done()
+  )
+end

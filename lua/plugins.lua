@@ -62,6 +62,9 @@ packer.startup({ function(use)
 
   -- Comment
   use 'numToStr/Comment.nvim'
+  
+  -- Autopair
+  use 'windwp/nvim-autopairs'
 
   -- RGB CSS/HEX Colorizer
   use 'norcalli/nvim-colorizer.lua'
