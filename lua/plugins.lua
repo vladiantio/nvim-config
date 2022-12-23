@@ -60,6 +60,9 @@ packer.startup({ function(use)
   -- Git
   use { 'lewis6991/gitsigns.nvim', tag = 'release' }
 
+  -- Comment
+  use 'numToStr/Comment.nvim'
+
   -- RGB CSS/HEX Colorizer
   use 'norcalli/nvim-colorizer.lua'
 
@@ -122,7 +125,8 @@ end,
     compile_path = packer_util.join_paths(fn.stdpath('data'), 'site', 'lua', 'packer_compiled.lua'),
     display = {
       open_fn = packer_util.float,
-    }
+    },
+    max_jobs = 2
   }
 })
 
