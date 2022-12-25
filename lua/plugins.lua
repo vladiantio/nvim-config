@@ -60,6 +60,12 @@ packer.startup({ function(use)
   -- Git
   use { 'lewis6991/gitsigns.nvim', tag = 'release' }
 
+  -- Git diffs
+  use {
+    'sindrets/diffview.nvim',
+    requires = { 'nvim-lua/plenary.nvim' }
+  }
+
   -- Comment
   use 'numToStr/Comment.nvim'
 
