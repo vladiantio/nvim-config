@@ -25,6 +25,12 @@ packer.startup({ function(use)
     end,
   }
 
+  -- Rainbow parentheses
+  use {
+    'p00f/nvim-ts-rainbow',
+    require = { 'nvim-treesitter/nvim-treesitter' }
+  }
+
   -- language pack
   use 'sheerun/vim-polyglot'
 
