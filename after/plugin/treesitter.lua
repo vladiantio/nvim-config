@@ -21,6 +21,7 @@ treesitter_configs.setup {
     "lua",
     "python",
     "scss",
+    "typescript",
     "tsx",
     "toml",
     "yaml"
