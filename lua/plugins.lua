@@ -16,6 +16,9 @@ packer.startup({ function(use)
   -- packer
   use 'wbthomason/packer.nvim'
 
+  -- Key mappings helper
+  use 'folke/which-key.nvim'
+
   -- nvim-treesitter
   use {
     'nvim-treesitter/nvim-treesitter',

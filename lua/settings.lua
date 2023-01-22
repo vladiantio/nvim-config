@@ -17,6 +17,8 @@ vim.o.diffopt        = 'internal,filler,algorithm:histogram,indent-heuristic'
 vim.o.wildignore     = '*.o,*~,*.obj,*.dylib,*.bin,*.dll,*.exe,*/.git/*,*/.svn/*,*/__pycache__/*,*/build/**,*/node_modules/*,*/bin/*,*/obj/*,*.jpg,*.png,*.jpeg,*.bmp,*.gif,*.tif,*.ico,*.webp,*.doc,*.pdf,*.ppt,*.xls,*.pyc,*.pkl,*pycache*,*.DS_Store,*.aux,*.bbl,*.blg,*.brf,*.fls,*.fdb_latexmk,*.synctex.gz,*.xdv,*.7z,*.rar,*.tar,*.zip'
 vim.o.wildignorecase = true
 vim.o.wildmode       = 'longest:full'
+vim.o.timeout        = true
+vim.o.timeoutlen     = 300
 
 -------------
 -- Backups --
