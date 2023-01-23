@@ -62,8 +62,8 @@ lspconfig.tsserver.setup {
 --}
 
 -- Python
--- Installation: pip install python-lsp-server
-lspconfig.pylsp.setup {
+-- Installation: pip install pyright
+lspconfig.pyright.setup {
   capabilities = capabilities,
   on_attach = lspconfig_on_attach,
 }
