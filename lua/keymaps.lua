@@ -140,33 +140,3 @@ function BufferlineKeymaps(bufferline)
     lmap('n', '<leader>' .. i, function () bufferline.go_to_buffer(i, true) end, opts)
   end
 end
-
--- nvim-tree
-function NvimTreeKeymaps()
-  map('n', '<leader>mm', ':NvimTreeToggle<cr>', { noremap = true })
-  map('n', '<leader>mf', ':NvimTreeFocus<cr>', { noremap = true })
-end
-
--- Telescope
-function TelescopeKeymaps()
-  map('n', '<leader>ff', ':Telescope find_files<cr>', { noremap = true })
-  map('n', '<leader>fg', ':Telescope live_grep<cr>', { noremap = true })
-  map('n', '<leader>fb', ':Telescope buffers<cr>', { noremap = true })
-  map('n', '<leader>fh', ':Telescope help_tags<cr>', { noremap = true })
-
-  -- Show key bindings list
-  map('n', '<leader>fk', ':Telescope keymaps<cr>', { noremap = true })
-
-  -- Show symbols list
-  map('n', '<leader>fs', ':Telescope symbols<cr>', { noremap = true })
-end
-
--- Trouble
-function TroubleKeymaps()
-  map('n', '<leader>xx', ':TroubleToggle<cr>', opts)
-  map('n', '<leader>xw', ':TroubleToggle workspace_diagnostics<cr>', opts)
-  map('n', '<leader>xd', ':TroubleToggle document_diagnostics<cr>', opts)
-  map('n', '<leader>xl', ':TroubleToggle loclist<cr>', opts)
-  map('n', '<leader>xq', ':TroubleToggle quickfix<cr>', opts)
-  map('n', 'gR', ':TroubleToggle lsp_references<cr>', opts)
-end
