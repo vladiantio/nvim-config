@@ -17,8 +17,8 @@ return {
     'NvimTreeCollapse',
   },
   keys = {
-    { '<leader>mm', ':NvimTreeToggle<cr>', desc = 'Toggle nvim-tree' },
-    { '<leader>mf', ':NvimTreeFocus<cr>', desc = 'Focus nvim-tree' },
+    { '<leader>mm', ':NvimTreeToggle<cr>', desc = 'Toggle nvim-tree', silent = true },
+    { '<leader>mf', ':NvimTreeFocus<cr>', desc = 'Focus nvim-tree', silent = true },
   },
   opts = {
     view = {

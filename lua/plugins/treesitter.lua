@@ -6,17 +6,32 @@ return {
       local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
       ts_update()
     end,
+    cmd = {
+      'TSEnable',
+      'TSDisable',
+      'TSToggle',
+      'TSInstall',
+      'TSUninstall',
+      'TSUpdate',
+      'TSBufEnable',
+      'TSBufDisable',
+      'TSModuleInfo'
+    },
     event = 'BufReadPost',
     opts = {
       -- A list of parser names, or 'all'
       ensure_installed = {
+        'bash',
         'c_sharp',
         'graphql',
         'html',
         'javascript',
         'json',
         'lua',
+        'markdown',
+        'markdown_inline',
         'python',
+        'regex',
         'scss',
         'typescript',
         'tsx',

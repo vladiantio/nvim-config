@@ -48,36 +48,36 @@ map('x', '<M-k>', ":m '<-2<CR>gv-gv", opts)
 -- Files --
 -----------
 -- Write current file
-map('n', '<C-s>', ':w<CR>', { noremap = true })
-map('i', '<C-s>', '<Esc>:w<CR>gi', { noremap = true })
-map('x', '<C-s>', '<Esc>:w<CR>gv', { noremap = true })
+map('n', '<C-s>', ':w<CR>', opts)
+map('i', '<C-s>', '<Esc>:w<CR>gi', opts)
+map('x', '<C-s>', '<Esc>:w<CR>gv', opts)
 -- Write all files (Ctrl+K+S)
-map('n', '<C-k><C-s>', ':wa<CR>', { noremap = true })
-map('i', '<C-k><C-s>', '<Esc>:wa<CR>gi', { noremap = true })
-map('x', '<C-k><C-s>', '<Esc>:wa<CR>gv', { noremap = true })
+map('n', '<C-k><C-s>', ':wa<CR>', opts)
+map('i', '<C-k><C-s>', '<Esc>:wa<CR>gi', opts)
+map('x', '<C-k><C-s>', '<Esc>:wa<CR>gv', opts)
 -- Write current file and quit
-map('n', '<leader>wq', ':wq<CR>', { noremap = true })
+map('n', '<leader>wq', ':wq<CR>', opts)
 -- Write current file and quit all files
-map('n', '<leader>wa', ':wqa<CR>', { noremap = true })
+map('n', '<leader>wa', ':wqa<CR>', opts)
 -- Quit file
-map('n', '<leader>qq', ':q<CR>', { noremap = true })
+map('n', '<leader>qq', ':q<CR>', opts)
 -- Force quit file
-map('n', '<leader>QQ', ':q!<CR>', { noremap = true })
+map('n', '<leader>QQ', ':q!<CR>', opts)
 -- Quit all files
-map('n', '<leader>qa', ':qa<CR>', { noremap = true })
+map('n', '<leader>qa', ':qa<CR>', opts)
 -- Force quit all files
-map('n', '<leader>QA', ':qa!<CR>', { noremap = true })
+map('n', '<leader>QA', ':qa!<CR>', opts)
 
 -- copy result to the system clipboard and echo the result
 -- the cb> prompt means the clipboard
 -- *f*ile *n*ame, ex. init.vim
-map('n', '<leader>cfn', ':let @+ = expand("%:t") | echo "cb> " . @+<CR>', { noremap = true })
+map('n', '<leader>cfn', ':let @+ = expand("%:t") | echo "cb> " . @+<CR>', opts)
 -- *f*ile *p*ath, ex. /home/user/nvim/init.vim
-map('n', '<leader>cfp', ':let @+ = expand("%:p") | echo "cb> " . @+<CR>', { noremap = true })
+map('n', '<leader>cfp', ':let @+ = expand("%:p") | echo "cb> " . @+<CR>', opts)
 -- *d*irectory *p*ath, ex. /home/user/nvim
-map('n', '<leader>cdp', ':let @+ = expand("%:p:h") | echo "cb> " . @+<CR>', { noremap = true })
+map('n', '<leader>cdp', ':let @+ = expand("%:p:h") | echo "cb> " . @+<CR>', opts)
 -- *d*irectory *n*ame, ex. nvim
-map('n', '<leader>cdn', ':let @+ = expand("%:p:h:t") | echo "cb> " . @+<CR>', { noremap = true })
+map('n', '<leader>cdn', ':let @+ = expand("%:p:h:t") | echo "cb> " . @+<CR>', opts)
 
 -------------
 -- Buffers --

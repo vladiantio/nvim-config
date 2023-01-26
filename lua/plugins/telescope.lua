@@ -4,11 +4,11 @@ return {
     dependencies = { 'nvim-lua/plenary.nvim', 'BurntSushi/ripgrep' },
     cmd = 'Telescope',
     keys = {
-      { '<leader>ff', ':Telescope find_files<cr>', desc = 'Find files' },
-      { '<leader>fg', ':Telescope live_grep<cr>', desc = 'Live grep' },
-      { '<leader>fb', ':Telescope buffers<cr>', desc = 'Find buffers' },
-      { '<leader>fh', ':Telescope help_tags<cr>', desc = 'Show help tags' },
-      { '<leader>fk', ':Telescope keymaps<cr>', desc = 'Show key bindings list' },
+      { '<leader>ff', function() require('telescope.builtin').find_files() end, desc = 'Find files' },
+      { '<leader>fg', function() require('telescope.builtin').live_grep() end, desc = 'Live grep' },
+      { '<leader>fb', function() require('telescope.builtin').buffers() end, desc = 'Find buffers' },
+      { '<leader>fh', function() require('telescope.builtin').help_tags() end, desc = 'Show help tags' },
+      { '<leader>fk', function() require('telescope.builtin').keymaps() end, desc = 'Show key bindings list' },
     },
   },
   -- search emoji and other symbols
@@ -17,7 +17,7 @@ return {
     dependencies = { 'nvim-telescope/telescope.nvim' },
     cmd = 'Telescope',
     keys = {
-      { '<leader>fs', ':Telescope symbols<cr>', desc = 'Show symbols list' },
+      { '<leader>fs', function() require('telescope.builtin').symbols() end, desc = 'Show symbols list' },
     },
   },
 }
