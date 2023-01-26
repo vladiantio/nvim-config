@@ -16,6 +16,7 @@ return {
   {
     'lewis6991/gitsigns.nvim',
     event = 'BufReadPost',
+    config = true,
   },
 
   -- Comment
@@ -28,7 +29,8 @@ return {
   -- Autopairs
   {
     'windwp/nvim-autopairs',
-    lazy = true,
+    event = 'VeryLazy',
+    config = true,
   },
 
   -- icons
