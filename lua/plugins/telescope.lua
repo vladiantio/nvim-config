@@ -10,6 +10,30 @@ return {
       { '<leader>fh', function() require('telescope.builtin').help_tags() end, desc = 'Show help tags' },
       { '<leader>fk', function() require('telescope.builtin').keymaps() end, desc = 'Show key bindings list' },
     },
+    opts = {
+      defaults = {
+        file_ignore_patterns = {
+          -- Directories
+          "%__pycache__[\\/]", "%.cache[\\/]", "%.git[\\/]", "%.vs[\\/]", "%.vscode[\\/]", "node_modules[\\/]", "packages[\\/]", "bin[\\/]", "obj[\\/]",
+          -- Trash files
+          "%.DS_Store",
+          -- Minified
+          "%.min",
+          -- Map
+          "%.map",
+          -- Fonts
+          "%.eot", "%.ttf", "%.otf", "%.woff",
+          -- Images
+          "%.bmp", "%.gif", "%.ico", "%.jpg", "%.jpeg", "%.png", "%.tif", "%.webp",
+          -- Office
+          "%.doc", "%.ppt", "%.xls",
+          -- Binaries
+          "%.bin", "%.class", "%.dll", "%.exe", "%.pdb", "%.pyc", "%.o", "%.obj", "%.so",
+          -- Compressed
+          "%.7z", "%.apk", "%.rar", "%.tar.gz", "%.zip",
+        },
+      },
+    },
   },
   -- search emoji and other symbols
   {
