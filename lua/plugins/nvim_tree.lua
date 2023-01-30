@@ -1,6 +1,7 @@
 return {
   'kyazdani42/nvim-tree.lua',
   dependencies = { 'kyazdani42/nvim-web-devicons' },
+  event = 'VeryLazy',
   init = function()
     vim.g.neo_tree_remove_legacy_commands = 1
     if vim.fn.argc() == 1 then
