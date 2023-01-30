@@ -2,6 +2,7 @@ return {
   {
     'nvim-telescope/telescope.nvim',
     dependencies = { 'nvim-lua/plenary.nvim', 'BurntSushi/ripgrep' },
+    event = 'VeryLazy',
     cmd = 'Telescope',
     keys = {
       { '<leader>ff', function() require('telescope.builtin').find_files() end, desc = 'Find files' },
@@ -9,6 +10,10 @@ return {
       { '<leader>fb', function() require('telescope.builtin').buffers() end, desc = 'Find buffers' },
       { '<leader>fh', function() require('telescope.builtin').help_tags() end, desc = 'Show help tags' },
       { '<leader>fk', function() require('telescope.builtin').keymaps() end, desc = 'Show key bindings list' },
+      { '<leader>gc', function() require('telescope.builtin').git_commits() end, desc = 'List Git Commits' },
+      { '<leader>gb', function() require('telescope.builtin').git_branches() end, desc = 'List Git Branches' },
+      { '<leader>gi', function() require('telescope.builtin').git_status() end, desc = 'List current Git changes' },
+      { '<leader>gs', function() require('telescope.builtin').git_stash() end, desc = 'List Git Stash items' },
     },
     opts = {
       defaults = {
@@ -30,7 +35,7 @@ return {
           -- Binaries
           "%.bin", "%.class", "%.dll", "%.exe", "%.pdb", "%.pyc", "%.o", "%.obj", "%.so",
           -- Compressed
-          "%.7z", "%.apk", "%.rar", "%.tar.gz", "%.zip",
+          "%.7z", "%.apk", "%.rar", "%.tar", "%.zip",
         },
       },
     },
@@ -39,7 +44,7 @@ return {
   {
     'nvim-telescope/telescope-symbols.nvim',
     dependencies = { 'nvim-telescope/telescope.nvim' },
-    cmd = 'Telescope',
+    event = 'VeryLazy',
     keys = {
       { '<leader>fs', function() require('telescope.builtin').symbols() end, desc = 'Show symbols list' },
     },
