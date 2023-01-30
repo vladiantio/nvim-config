@@ -15,14 +15,17 @@ map('n', '<C-j>', '<C-w>j', opts)
 map('n', '<C-k>', '<C-w>k', opts)
 map('n', '<C-l>', '<C-w>l', opts)
 
--- Search within insert mode
-map('i', '<A-n>', '<Esc>`^ni', opts)
-map('i', '<A-N>', '<Esc>`^Ni', opts)
+-- Search
+map('', 'n', 'nzzzv', opts)
+map('', 'N', 'Nzzzv', opts)
+-- Search within insert mode (Alt+n or Alt+Shift+n)
+map('i', '<M-n>', '<Esc>`^nzzzvi', opts)
+map('i', '<M-N>', '<Esc>`^Nzzzvi', opts)
 
 -- Don't copy the replaced text after pasting in visual mode
 -- https://vim.fandom.com/wiki/Replace_a_word_with_yanked_text#Alternative_mapping_for_paste
-map('x', 'p', 'p:let @+=@0<CR>:let @"=@0<CR>gv', opts)
-map('x', 'P', 'p:let @+=@0<CR>:let @"=@0<CRPgv', opts)
+map('x', 'p', 'p:let @+=@0<CR>:let @"=@0<CR>', opts)
+map('x', 'P', 'P:let @+=@0<CR>:let @"=@0<CR>', opts)
 
 -- Select all text in current buffer
 map('', '<leader>a', ':keepjumps normal! ggVG<CR>', opts)
