@@ -1,6 +1,6 @@
 return {
-  'kyazdani42/nvim-tree.lua',
-  dependencies = { 'kyazdani42/nvim-web-devicons' },
+  'nvim-tree/nvim-tree.lua',
+  dependencies = { 'nvim-tree/nvim-web-devicons' },
   event = 'VeryLazy',
   init = function()
     vim.g.neo_tree_remove_legacy_commands = 1

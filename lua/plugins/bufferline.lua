@@ -1,7 +1,7 @@
 return {
   'akinsho/bufferline.nvim',
   version = 'v2.*',
-  dependencies = { 'kyazdani42/nvim-web-devicons' },
+  dependencies = { 'nvim-tree/nvim-web-devicons' },
   opts = {
     options = {
       offsets = {
