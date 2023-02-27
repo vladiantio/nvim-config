@@ -6,12 +6,6 @@ return {
     config = true,
   },
 
-  -- language pack
-  {
-    'sheerun/vim-polyglot',
-    event = 'BufReadPre',
-  },
-
   -- Gitsigns
   {
     'lewis6991/gitsigns.nvim',
