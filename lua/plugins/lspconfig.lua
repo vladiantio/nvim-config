@@ -107,7 +107,7 @@ return {
 
       -- JavaScript / TypeScript
       -- Installation: npm i -g typescript typescript-language-server
-      tsserver = {},
+      ts_ls = {},
 
       -- VueJS
       -- Installation: npm i -g vls

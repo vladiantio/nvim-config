@@ -24,11 +24,6 @@ return {
   opts = {
     view = {
       adaptive_size = false,
-      mappings = {
-        list = {
-          { key = 'u', action = 'dir_up' },
-        },
-      },
     },
     renderer = {
       group_empty = true,
