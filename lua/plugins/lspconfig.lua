@@ -8,6 +8,10 @@ return {
       -- Installation: npm i -g @angular/language-server
       -- angularls = {},
 
+      -- Astro
+      -- Installation: npm i -g @astrojs/language-server
+      astro = {},
+
       -- C# LSP
       -- Installation: dotnet tool install --global csharp-ls
       -- dotnet = {},
